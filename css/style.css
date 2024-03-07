@@ -1,7 +1,135 @@
 @import url(variables.css);
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "SF-Pro-Text-Regular";
+}
+
+
+.cont{
+    position: relative; 
+    width: 100%;
+    height: 360px;
+    overflow: hidden;
+    background-color: #33404F;
+    border-bottom-right-radius: 80%;
+    border-bottom-left-radius: 80%;
+    margin-top: -180px;
+    z-index: -10; 
+}
+
+.transparent-header {
+    background-color: transparent;
+    position: fixed;
+    width: 100%;
+    z-index: 20; /
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    align-items: center;
+    height: 50px;
+    padding: 0 20px;
+    flex-direction: row;
+}
+
+.logo{
+    grid-area: logo;
+    gap: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.logo h1 {
+    display: flex;
+    flex-direction: row;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    font-family: "SF-Pro-Text-Bold";
+    color: white;
+
+}
+
+.logo i {
+    font-size: 24px;
+    color: #fff;
+}
+
+.burger{
+    grid-area: burger;
+    color: white;
+    justify-content: flex-end;
+}
+
+.Cir{
+position: absolute;
+background: #00DDA3;
+width: 220px;
+border-radius: 100%;
+display: flex;
+flex-direction: column;
+justify-content: center;
+height: 220px;
+align-items: center;
+color: #FFFFFF;
+gap: 10px;
+margin-left: 20.5%;
+margin-top: -40vw;
+}
+
+
+.Cir img {
+    width: 80%;
+    height: 15%;
+}
+
+.Cir p {
+    margin-bottom: 0;
+}
+
+.butts{
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    color: #00DDA3;
+    margin-top: 25%;
+    margin-left: 7%;
+    gap: 30px;
+}
+
+.butts button {
+    background: #fff;
+    padding: 10px;
+    border: 1px solid #00DDA3;
+    border-radius: 20px;
+    width: 90px;
+    color: #00DDA3;
+}
+
+.butts button:hover {
+    background: #302960;
+}
+
+.but3 button{
+    border-color: #535658;
+    color: #535658;
+}
+
+.but1 button{
+    border-color: #33404F;
+    background: #33404F;
+    color: #ffffff;
+}
+
+.but1 button:hover {
+    background: #2861b5;
+}
+
+.but3 button:hover {
+    background: #83d6a3;
 }
