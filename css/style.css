@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "SF-Pro-Text-Regular";
+    font-family: "Work Sans";
 }
 
 .header{
@@ -32,7 +32,7 @@
 .logo h1{
     font-size: 1.2rem;
     text-transform: uppercase;
-    font-family:"SF-Pro-Text-Bold" ;
+    font-family:"Work Sans" ;
 
 
 }
@@ -116,11 +116,11 @@
     font-size: 20px;
 }
 .banner__data strong{
-    font-family: "SF-Pro-Text-Bold";
+    font-family: "Work Sans";
     font-size: 20px;
 }
 .banner__data small{
-    font-family: "SF-Pro-Text-Regular";
+    font-family: "Work Sans";
     color: grey;
     margin-top: 0.3rem;
 }
@@ -137,13 +137,13 @@
 }
 .carusel__title h3{
     font-size: 25px;
-    font-family: "SF-Pro-Text-Bold";
+    font-family: "Work Sans";
 }
 .banner__more{
     margin-top: 10px;
     border: none;
     border-radius: 10px;
-    font-family: "SF-Pro-Text-Bold";
+    font-family: "Work Sans";
     font-size: .8rem;
     color: var(--color-ternario);
     padding: 5px;
@@ -153,7 +153,7 @@
 [data-card]::before{
     content: attr(data-card);
     color: var(--color-primary);
-    font-family: "SF-Pro-Text-Bold";
+    font-family: "Work Sans";
 }
 
 .carusel__card{
