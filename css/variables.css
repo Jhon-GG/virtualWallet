@@ -20,9 +20,12 @@
 }
 
 :root{
-    --color-primary: #00DDA3;
-    --color-secundary: #33404F;
+    --color-primary: #dada95;
+    --color-secundary: #afc2ae;
     --color-ternario: #fff;
-    --color-cuarto: #B5C5C3;
+    --color-cuarto: #868f74;
+    --color-arriba: #9ba79c;
+    --color-abajo: #868f74;
+    --color-nav: rgb(255, 255, 255);
     --color-shado-transparent: 0px 0px 10px rgba(0, 0, 0, 0.416);
 }

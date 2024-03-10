@@ -3,8 +3,61 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "SF-Pro-Text-Regular";
+    font-family: Poppins;
 }
+
+.header{
+    display: grid;
+    width: 100%;
+    height: 50px;
+    background: var(--color-secundary);
+    padding: 10px;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat (1,1fr);
+    grid-template-areas:
+    "logo burger"
+}
+
+.header .icono, 
+    .header .hamb{
+        color: var(--color-ternario);
+    }
+    .header .icono h1{
+        color: var(--color-ternario);
+    }
+
+.icono{
+    grid-area: logo;
+    gap: 10px;
+    /* */
+
+
+}
+.hamb{
+    grid-area: burger;
+    justify-content: flex-end
+}
+.icono h1{
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: var(--color-ternario);
+
+
+}
+.icono, .hamb{
+    width: 100%;
+    height: 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+.icono i, .hamb i{
+    font-size: 24px;
+
+}
+
+/* -----------------------------------------------BANNER------------------------------------------------- */
 
 .banner{
     background: var(--color-secundary);
@@ -17,6 +70,7 @@
     height: 120vh;
     object-fit: cover;
 }
+
 
 .profile{
   
@@ -62,12 +116,10 @@
 }
 .profile__titule h3{
     font-size: 2em;
-    font-family: "SF-Pro-Text-Heavy.otf";
 }
 
 .profile__titule p{
-    font-size: 2.3em;
-    font-family: "SF-Pro-Text-Regular";
+    font-size: 1.7em;
 }
 
 .profile__process{
@@ -94,7 +146,6 @@
 
 .profile__savings label,
 .profile__assets label{
-    font-family: "SF-Pro-Text-Semibold";
     font-size: 1.3em;
 }
 
@@ -147,7 +198,6 @@ progress[value]::-moz-progress-bar {
     background: olive;
     font-size: 1.4rem;
     text-transform: capitalize;
-    font-family: "SF-pro-Text-Bold";
 }
 
 
@@ -197,27 +247,56 @@ progress[value]::-moz-progress-bar {
 
 
 /* ------------------------------------------------------------------------ */
+/* 
 
-
-.transactionsç{
+.transactions{
     display: flex;
     flex-direction: column;
-}
+    gap: 15px;
+    margin-top: 300px;
+} */
 
 .transactions__title{
     margin-bottom: 20px;
     font-size: 11px;
 }
+.all{
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    height: 11vh;
+    overflow-y: scroll;
+} 
 
-.foods{
+.all__carrusel{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content:  space-between;
+    align-items: center;
+    padding: 10px;
 }
 
-.foods img{
+.all__desc{
     display: flex;
-    background: var(--color-primary);
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+}
+
+
+.boox{
+    display: flex;
+    flex-direction: row;
+    /* padding-top: 15px;    */
+    gap: 5px;
+    overflow-y: scroll;
+    justify-content: space-between;
+}
+
+.boox img{
+    display: flex;
+    background: var(--color-arriba);
     border-radius: 50%;
     padding: 8px;
     justify-content: center;
@@ -235,59 +314,83 @@ progress[value]::-moz-progress-bar {
     height: 36px;
 }
 
-.foods__content{
+.boox__content{
     display: flex;
     flex-direction: column;
-    margin-left: -40px;
+    justify-content: space-evenly;
+    margin-left: -10px;
 }
 
-.foods__content h3{
+.boox__content h3{
+    margin-left: 20px;
     font-size: 16px;
 }
 
-.foods__content p{
+.boox__content p{
+    margin-left: 20px;
     font-size: 14px;
     color: rgb(209, 209, 209);
 }
 
-.food__numbers{
+.boox__numbers{
     display: flex;
     flex-direction: column;
+    padding: 10px;
 }
 
-.food__h2{
+.boox__h2{
     font-size: 16px;
 }
 
-.food__p{
+.boox__p{
     font-size: 14px;
     color: rgb(209, 209, 209);
 }
 
-************************************************************
 
-.shopping{
+/* 
+************************************************************ */
+
+.shop__carrusel{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content:  space-between;
+    align-items: center;
+    padding: 5px;
+    margin-top: -20px;
 }
 
-.clase{
+.shop__desc{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+}
+
+
+.shop{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
-    margin-top: 20px; 
+    /* padding-top: 15px;    */
+    gap: 5px;
+    overflow-y: scroll;
+    justify-content: space-between;
+    margin-left: 6px;
 }
 
-.shopping img{
+.shop img{
     display: flex;
-    background: var(--color-secundary);
+    background: var(--color-abajo);
     border-radius: 50%;
     padding: 8px;
     justify-content: center;
     align-content: center;
-    margin-right: 70px;
 }
+
+/* .contenido{
+    display: flex;
+    flex-direction: row;
+} */
 
 .downArrow{
     margin-top: 7px;
@@ -295,33 +398,68 @@ progress[value]::-moz-progress-bar {
     height: 36px;
 }
 
-.shopping__content{
+.shop__content{
     display: flex;
     flex-direction: column;
-    margin-left: -115px;
-    position: relative;
+    justify-content: space-evenly;
+    margin-left: -10px;
 }
 
-.shopping__content h3{
+.shop__content h3{
+    margin-left: 20px;
     font-size: 16px;
 }
 
-.shopping__content p{
+.shop__content p{
+    margin-left: 20px;
     font-size: 14px;
     color: rgb(209, 209, 209);
 }
 
-.shopping__numbers{
+.shop__numbers{
     display: flex;
     flex-direction: column;
-    margin-left: 25px;
+    padding: 10px;
 }
 
-.shopping__h2{
+.shop__h2{
     font-size: 16px;
 }
 
-.shopping__p{
+.shop__p{
     font-size: 14px;
     color: rgb(209, 209, 209);
+}
+
+
+/* 
+-----------------------------------  Menu Movil  ---------------------------------------------------- */
+
+.menu{
+    background: var(--color-arriba);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.menu ul{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.menu ul li {
+    list-style: none;
+}
+.menu ul li a{
+    text-decoration: none;
+}
+.menu ul li a i{
+    font-size: 25px;
+    color: var(--color-primary);
+}
+.menu ul li a i:hover{
+    color: var(--color-abajo);
+    transition: color .3s ease-in-out;
 }
