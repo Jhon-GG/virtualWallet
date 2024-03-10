@@ -3,10 +3,6 @@
     src: url(../storage/font/SF-Pro-Text-Font-Family/SF-Pro-Text-Regular.otf);
 }
 @font-face {
-    font-family: "SF-Pro-Text-Regular";
-    src: url(../storage/font/SF-Pro-Text-Font-Family/SF-Pro-Text-Regular.otf);
-}
-@font-face {                           
     font-family: "SF-Pro-Text-Bold";
     src: url(../storage/font/SF-Pro-Text-Font-Family/SF-Pro-Text-Bold.otf);
 }
@@ -19,9 +15,4 @@
     --color-abajo: #868f74;
     --color-nav: rgb(255, 255, 255);
     --color-shado-transparent: 0px 0px 10px rgba(0, 0, 0, 0.416);
-}
-[data-card]::before{
-    content: attr(data-card);
-    color: var(--color-primary);
-    font-family: "SF-Pro-Text-Bold";
 }

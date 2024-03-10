@@ -1,0 +1,465 @@
+@import url(variablesProfile.css);
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Poppins;
+}
+
+.header{
+    display: grid;
+    width: 100%;
+    height: 50px;
+    background: var(--color-secundary);
+    padding: 10px;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat (1,1fr);
+    grid-template-areas:
+    "logo burger"
+}
+
+.header .icono, 
+    .header .hamb{
+        color: var(--color-ternario);
+    }
+    .header .icono h1{
+        color: var(--color-ternario);
+    }
+
+.icono{
+    grid-area: logo;
+    gap: 10px;
+    /* */
+
+
+}
+.hamb{
+    grid-area: burger;
+    justify-content: flex-end
+}
+.icono h1{
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    color: var(--color-ternario);
+
+
+}
+.icono, .hamb{
+    width: 100%;
+    height: 25px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+.icono i, .hamb i{
+    font-size: 24px;
+
+}
+
+/* -----------------------------------------------BANNER------------------------------------------------- */
+
+.banner{
+    background: var(--color-secundary);
+    position: absolute;
+    z-index: -10;
+}
+
+.banner img{
+    width: 100%;
+    height: 120vh;
+    object-fit: cover;
+}
+
+
+.profile{
+  
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 0px;
+    gap: 20px;
+}
+
+
+
+.profile__activities{
+    background: var(--color-ternario);
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    padding: 20px 10px;
+    position: absolute;
+    /* z-index: 5; */
+    bottom: 60px;
+    /* height: 60vh;
+    transition: height .3s ease-out; */
+}
+
+/* .profile__activities:active{
+    height: 85vh;
+} */
+
+.profile__balance{
+    /* background: green; */
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 10px;
+}
+
+.profile__titule{
+    /* background: blue; */
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-transform:  capitalize;
+    color: var(--color-ternario);
+}
+.profile__titule h3{
+    font-size: 2em;
+}
+
+.profile__titule p{
+    font-size: 1.7em;
+}
+
+.profile__process{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+    color: var(--color-ternario);
+}
+
+.profile__savings, .profile__assets{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+}
+
+.profile__savings small,
+.profile__assets small{
+    text-transform: uppercase;
+    font-size: .8em;
+    margin-bottom: 5px;
+}
+
+.profile__savings label,
+.profile__assets label{
+    font-size: 1.3em;
+}
+
+.profile__savings progress,
+.profile__assets progress{
+    width: 100%;
+}
+
+.profile__savings progress[value] {
+    --color: var(--color-primary);
+    --background: var(--color-ternario);
+    background: var(--background);
+}
+
+.profile__assets progress[value] {
+    --color: var(--color-cuarto);
+    --background: var(--color-ternario);
+    background: var(--background);
+}
+
+progress[value] {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: none;
+    height: .5em;
+    border-radius: 10em;
+}
+
+.profile__savings progress[value]::-webkit-progress-bar,
+.profile__assets progress[value]::-webkit-progress-bar {
+    border-radius: 10em;
+    height: .5em;
+    background: var(--background);
+}
+
+progress[value]::-webkit-progress-value {
+    border-radius: 10em;
+    background: var(--color);
+}
+
+progress[value]::-moz-progress-bar {
+    border-radius: 10em;
+    background: var(--color);
+}
+
+*************************************************************************
+
+.activities__title h3{
+    background: olive;
+    font-size: 1.4rem;
+    text-transform: capitalize;
+}
+
+
+
+.activities__carusel__card {
+    width: 95vw;
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+    margin: auto;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 15px 0;
+}
+
+.activities__carusel__img {
+    min-width: 30%;
+    min-height: 19vh;
+    background: var(--color-ternario);
+    box-shadow: var(--color-shado-transparent);
+    border-radius: 10px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-secundary);
+    margin: 15px 0;
+}
+
+.activities__carusel__img small,
+.activities__carusel__img h4 {
+    position: absolute;
+}
+
+.activities__carusel__img i {
+    font-size: 2.5em;
+}
+
+.activities__carusel__img h4 {
+    bottom: 25px;
+}
+
+
+/* ------------------------------------------------------------------------ */
+/* 
+
+.transactions{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    margin-top: 300px;
+} */
+
+.transactions__title{
+    margin-bottom: 20px;
+    font-size: 11px;
+}
+.all{
+    padding-top: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    height: 11vh;
+    overflow-y: scroll;
+} 
+
+.all__carrusel{
+    display: flex;
+    flex-direction: row;
+    justify-content:  space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.all__desc{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+}
+
+
+.boox{
+    display: flex;
+    flex-direction: row;
+    /* padding-top: 15px;    */
+    gap: 5px;
+    overflow-y: scroll;
+    justify-content: space-between;
+}
+
+.boox img{
+    display: flex;
+    background: var(--color-arriba);
+    border-radius: 50%;
+    padding: 8px;
+    justify-content: center;
+    align-content: center;
+}
+
+.contenido{
+    display: flex;
+    flex-direction: row;
+}
+
+.upArrow{
+    margin-top: 7px;
+    width: 36px;
+    height: 36px;
+}
+
+.boox__content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: -10px;
+}
+
+.boox__content h3{
+    margin-left: 20px;
+    font-size: 16px;
+}
+
+.boox__content p{
+    margin-left: 20px;
+    font-size: 14px;
+    color: rgb(209, 209, 209);
+}
+
+.boox__numbers{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.boox__h2{
+    font-size: 16px;
+}
+
+.boox__p{
+    font-size: 14px;
+    color: rgb(209, 209, 209);
+}
+
+
+/* 
+************************************************************ */
+
+.shop__carrusel{
+    display: flex;
+    flex-direction: row;
+    justify-content:  space-between;
+    align-items: center;
+    padding: 5px;
+    margin-top: -20px;
+}
+
+.shop__desc{
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+}
+
+
+.shop{
+    display: flex;
+    flex-direction: row;
+    /* padding-top: 15px;    */
+    gap: 5px;
+    overflow-y: scroll;
+    justify-content: space-between;
+    margin-left: 6px;
+}
+
+.shop img{
+    display: flex;
+    background: var(--color-abajo);
+    border-radius: 50%;
+    padding: 8px;
+    justify-content: center;
+    align-content: center;
+}
+
+/* .contenido{
+    display: flex;
+    flex-direction: row;
+} */
+
+.downArrow{
+    margin-top: 7px;
+    width: 36px;
+    height: 36px;
+}
+
+.shop__content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: -10px;
+}
+
+.shop__content h3{
+    margin-left: 20px;
+    font-size: 16px;
+}
+
+.shop__content p{
+    margin-left: 20px;
+    font-size: 14px;
+    color: rgb(209, 209, 209);
+}
+
+.shop__numbers{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.shop__h2{
+    font-size: 16px;
+}
+
+.shop__p{
+    font-size: 14px;
+    color: rgb(209, 209, 209);
+}
+
+
+/* 
+-----------------------------------  Menu Movil  ---------------------------------------------------- */
+
+.menu{
+    background: var(--color-arriba);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.menu ul{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+.menu ul li {
+    list-style: none;
+}
+.menu ul li a{
+    text-decoration: none;
+}
+.menu ul li a i{
+    font-size: 25px;
+    color: var(--color-primary);
+}
+.menu ul li a i:hover{
+    color: var(--color-abajo);
+    transition: color .3s ease-in-out;
+}
