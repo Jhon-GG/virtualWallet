@@ -1,4 +1,4 @@
-@import url(variables.css);
+@import url(variablesProfile.css);
 *{
     margin: 0;
     padding: 0;
@@ -17,6 +17,16 @@
     grid-template-areas:
     "logo burger";
     background: var(--color-primary);
+    animation: slideIn 0.5s ease-in-out;
+}
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
 }
 
 .header .icono, 
@@ -46,6 +56,7 @@
 .icono h1{
     font-size: 1.2rem;
     text-transform: uppercase;
+    margin-left: 5px;
 }
 
 .icono, .hamb{
@@ -54,12 +65,10 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-
 }
 
 .icono i, .hamb i{
     font-size: 24px;
-
 }
 
 /*********************************************************************/
@@ -102,7 +111,7 @@
 .banner__logo{
     display: flex;
     position: relative;
-    margin-top: -40px;
+    margin-top: -44px;
     width: 25vh;
     height: 25vh;
     align-items: center;
@@ -113,6 +122,8 @@
 .banner__logo img{
     display: flex;
     padding: 15px;
+    margin-top: 25px;
+    margin-left: 5px;
     height: 110px;
     align-items: flex-start;
     justify-content: center;
@@ -126,7 +137,26 @@
     display: flex;
     justify-content: center;
     box-shadow: var(--color-shado-tranparent);
+    transition: outline 0.3s ease-in-out;
 }
+
+.banner__card:hover{
+    outline: 2px solid #868f74;
+}
+
+@keyframes outlineAnimation {
+    0%{
+        outline-color: #868f74;
+    }
+    50%{
+        outline-color: #333;
+    }
+    100%{
+        outline-color: #868f74;
+    }
+}
+
+
 .banner__data{
     width: 80%;
     /* background: orange; */
@@ -196,7 +226,7 @@
 .carusel__img{
     min-width: 55%;
     min-height: 40vh;
-    background: url(../storage/img/card.svg);
+    background: url(../storage/img/typeCard1.svg);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: center;
@@ -206,14 +236,21 @@
     justify-content: center;
     align-items: center;
     color: var(--color-ternario);
+    animation: fadeInUp 1s ease-out;
 }
 .carusel__img small,
 .carusel__img img{
     position: absolute;
+    opacity: 0;
 }
+
 .carusel__img small{
-    top: 20px;
-    right: 20px;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    color: #333;
 }
 
 .carusel__img img{
@@ -221,12 +258,72 @@
     bottom: 20px;
 }
 
+@keyframes fadeInUp {
+    0% {
+        transform: translateY(20px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.carusel__image{
+    min-width: 55%;
+    min-height: 40vh;
+    background: url(../storage/img/typeCard2.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    color: var(--color-ternario);
+    animation: fadeInUp 1s ease-out;
+}
+.carusel__image small,
+.carusel__image img{
+    position: absolute;
+    opacity: 0;
+}
+
+.carusel__image small{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 14px;
+    color: #333;
+}
+
+.carusel__image img{
+    left: 20px;
+    bottom: 20px;
+}
+
+/* 
+------------------------------------------MENU------------------------------------------------------------ */
+
 .menu{
     background: var(--color-arriba);
     position: fixed;
     bottom: 0;
     width: 100%;
+    animation: slideIn 0.5s ease-in;
 }
+
+@keyframes slideIn{
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
 .menu ul{
     width: 100%;
     height: 60px;
@@ -243,9 +340,9 @@
 }
 .menu ul li a i{
     font-size: 25px;
-    color: var(--color-primary);
+    color: #3D6770  ;
 }
 .menu ul li a i:hover{
-    color: var(--color-abajo);
+    color: var(--color-ternario);
     transition: color .3s ease-in-out;
 }

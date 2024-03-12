@@ -2,20 +2,16 @@
     font-family: "SF-Pro-Text-Regular";
     src: url(../storage/font/SF-Pro-Text-Font-Family/SF-Pro-Text-Regular.otf);
 }
-@font-face {
-    font-family: "SF-Pro-Text-Regular";
-    src: url(../storage/font/SF-Pro-Text-Font-Family/SF-Pro-Text-Regular.otf);
-}
 @font-face {                           
     font-family: "SF-Pro-Text-Bold";
     src: url(../storage/font/SF-Pro-Text-Font-Family/SF-Pro-Text-Bold.otf);
 }
 :root{
-    --color-primary: #ddddbd;
+    --color-primary: #AFC2AE;
     --color-secundary: #afc2ae;
     --color-ternario: #fff;
     --color-cuarto: #ddddbd;
-    --color-arriba: #9ba79c;
+    --color-arriba: #AFC2AE;
     --color-abajo: #868f74;
     --color-nav: rgb(255, 255, 255);
     --color-shado-transparent: 0px 0px 10px rgba(0, 0, 0, 0.416);

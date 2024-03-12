@@ -1,4 +1,4 @@
-@import url(variablesProfile.css);
+@import url(variables.css);
 *{
     margin: 0;
     padding: 0;
@@ -10,15 +10,26 @@
     display: grid;
     width: 100%;
     height: 50px;
-    background: var(--color-secundary);
+    /* background: red; */
     padding: 10px;
     grid-template-columns: repeat(2,1fr);
     grid-template-rows: repeat (1,1fr);
     grid-template-areas:
-    "logo burger"
+    "logo burger";
+    background: var(--color-primary);
+    animation: slideIn 0.5s ease-in-out;
 }
 
-.header .icono, 
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+.header .icono,
     .header .hamb{
         color: var(--color-ternario);
     }
@@ -29,33 +40,39 @@
 .icono{
     grid-area: logo;
     gap: 10px;
-    /* */
-
-
 }
+
+.icono{
+    grid-area: logo;
+    gap: 10px;
+    /* */
+}
+
 .hamb{
     grid-area: burger;
     justify-content: flex-end
 }
+
 .icono h1{
     font-size: 1.2rem;
     text-transform: uppercase;
-    color: var(--color-ternario);
-
-
+    margin-left: 5px;
 }
+
 .icono, .hamb{
     width: 100%;
     height: 25px;
     display: flex;
     flex-direction: row;
     align-items: center;
-
 }
+
 .icono i, .hamb i{
     font-size: 24px;
-
 }
+
+/*********************************************************************/
+
 
 /* -----------------------------------------------BANNER------------------------------------------------- */
 
@@ -73,7 +90,7 @@
 
 
 .profile{
-  
+
     display: grid;
     grid-template-columns: 1fr;
     padding: 0px;
@@ -90,6 +107,7 @@
     position: absolute;
     /* z-index: 5; */
     bottom: 60px;
+    overflow: hidden;
     /* height: 60vh;
     transition: height .3s ease-out; */
 }
@@ -192,6 +210,11 @@ progress[value]::-moz-progress-bar {
     background: var(--color);
 }
 
+/* ---------------------------------------------------------------------------------------------- */
+
+
+
+
 *************************************************************************
 
 .activities__title h3{
@@ -200,7 +223,11 @@ progress[value]::-moz-progress-bar {
     text-transform: capitalize;
 }
 
-
+.activities__carusel{
+    display: flex;
+    width: 600vw;
+    animation: scrollActivities 7s linear infinite;
+}
 
 .activities__carusel__card {
     width: 95vw;
@@ -212,6 +239,7 @@ progress[value]::-moz-progress-bar {
     justify-content: center;
     gap: 10px;
     margin: 15px 0;
+    animation: scrollCards 7s linear infinite;
 }
 
 .activities__carusel__img {
@@ -228,7 +256,7 @@ progress[value]::-moz-progress-bar {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    color: var(--color-secundary);
+    color: #000;
     margin: 15px 0;
 }
 
@@ -246,8 +274,21 @@ progress[value]::-moz-progress-bar {
 }
 
 
+@keyframes scrollActivities {
+    to {
+        transform: translateX(-10%);
+        width: 75vh;
+    }
+}
+
+@keyframes scrollCards {
+    to {
+        transform: translateX(-103.33%);
+    }
+}
+
 /* ------------------------------------------------------------------------ */
-/* 
+/*
 
 .transactions{
     display: flex;
@@ -267,7 +308,7 @@ progress[value]::-moz-progress-bar {
     gap: 15px;
     height: 11vh;
     overflow-y: scroll;
-} 
+}
 
 .all__carrusel{
     display: flex;
@@ -296,7 +337,6 @@ progress[value]::-moz-progress-bar {
 
 .boox img{
     display: flex;
-    background: var(--color-arriba);
     border-radius: 50%;
     padding: 8px;
     justify-content: center;
@@ -348,7 +388,7 @@ progress[value]::-moz-progress-bar {
 }
 
 
-/* 
+/*
 ************************************************************ */
 
 .shop__carrusel{
@@ -380,7 +420,6 @@ progress[value]::-moz-progress-bar {
 
 .shop img{
     display: flex;
-    background: var(--color-abajo);
     border-radius: 50%;
     padding: 8px;
     justify-content: center;
@@ -432,18 +471,29 @@ progress[value]::-moz-progress-bar {
 }
 
 
-/* 
------------------------------------  Menu Movil  ---------------------------------------------------- */
+/*
+------------------------------------------MENU------------------------------------------------------------ */
 
 .menu{
     background: var(--color-arriba);
     position: fixed;
     bottom: 0;
     width: 100%;
+    animation: slideIn 0.5s ease-in;
 }
+
+@keyframes slideIn{
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
 .menu ul{
     width: 100%;
-    height: 60px;
+    height: 70px;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -457,9 +507,9 @@ progress[value]::-moz-progress-bar {
 }
 .menu ul li a i{
     font-size: 25px;
-    color: var(--color-primary);
+    color: #3D6770  ;
 }
 .menu ul li a i:hover{
-    color: var(--color-abajo);
+    color: var(--color-ternario);
     transition: color .3s ease-in-out;
 }

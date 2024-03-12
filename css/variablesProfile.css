@@ -20,11 +20,11 @@
 }
 
 :root{
-    --color-primary: #dada95;
+    --color-primary: #AFC2AE;
     --color-secundary: #afc2ae;
     --color-ternario: #fff;
-    --color-cuarto: #868f74;
-    --color-arriba: #9ba79c;
+    --color-cuarto: #ddddbd;
+    --color-arriba: #AFC2AE;
     --color-abajo: #868f74;
     --color-nav: rgb(255, 255, 255);
     --color-shado-transparent: 0px 0px 10px rgba(0, 0, 0, 0.416);
